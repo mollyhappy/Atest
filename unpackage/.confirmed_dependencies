@@ -1,0 +1,336 @@
+{
+  "index.html": {
+    "resources": [
+      "img/xx2.jpg",
+      "img/bg.jpg",
+      "img/bg2.jpg",
+      "img/bg3.jpg",
+      "img/bg4.jpg",
+      "img/main.png",
+      "img/new.png",
+      "img/new .png",
+      "img/cp.png",
+      "img/about.png",
+      "img/liuyan.png",
+      "img/menu.png",
+      "img/nw.png",
+      "img/new1.png",
+      "img/tuling.png",
+      "img/local.png",
+      "img/yiyuan.png",
+      "img/tenum.png",
+      "img/6.jpg",
+      "img/sun.png",
+      "img/hot.png",
+      "new.html",
+      "tuling.html",
+      "yiyuan.html",
+      "address.html",
+      "local.html",
+      "newinfo.html"
+    ],
+    "refer": [
+      "new.html",
+      "tuling.html",
+      "yiyuan.html",
+      "address.html",
+      "local.html",
+      "newinfo.html"
+    ]
+  },
+  "test.html": {
+    "resources": [
+      "img/g4.jpg",
+      "img/xx2.jpg",
+      "img/cp.png",
+      "img/liuyan.png",
+      "img/main.png",
+      "img/new.png",
+      "img/menu.png",
+      "img/bg2.jpg",
+      "img/next.png",
+      "img/about.png",
+      "img/story.png",
+      "img/g1.jpg",
+      "tuling.html"
+    ],
+    "refer": []
+  },
+  "tuling.html": {
+    "resources": [
+      "img/cp.png",
+      "img/liuyan.png",
+      "img/road.png",
+      "img/flight.png",
+      "img/tunew.png",
+      "img/m2.jpg",
+      "img/about.png",
+      "img/story.png",
+      "img/xx2.jpg",
+      "img/greens.png",
+      "img/main.png",
+      "img/new.png",
+      "img/m6.jpg",
+      "img/menu.png",
+      "img/share.png",
+      "img/bg2.jpg",
+      "img/bg4.jpg",
+      "joke.html",
+      "img/g4.jpg",
+      "img/next.png",
+      "img/g1.jpg",
+      "tu_joke.html",
+      "index.html",
+      "tu_story.html"
+    ],
+    "refer": [
+      "joke.html",
+      "tu_joke.html",
+      "index.html",
+      "tu_story.html"
+    ]
+  },
+  "joke.html": {
+    "resources": [
+      "img/next.png",
+      "img/m6.jpg",
+      "img/g4.jpg",
+      "img/bg2.jpg",
+      "img/g1.jpg"
+    ],
+    "refer": []
+  },
+  "tu_joke.html": {
+    "resources": [
+      "img/g4.jpg",
+      "img/bg2.jpg",
+      "img/next.png",
+      "img/g1.jpg",
+      "tuling.html"
+    ],
+    "refer": [
+      "tuling.html"
+    ]
+  },
+  "yi_qqmusic.html": {
+    "resources": [
+      "img/xx2.jpg",
+      "img/cp.png",
+      "img/liuyan.png",
+      "img/main.png",
+      "img/new.png",
+      "img/menu.png",
+      "img/about.png",
+      "yi_playmusic.html",
+      "yiyuan.html",
+      "local.html",
+      "img/new1.jpg"
+    ],
+    "refer": [
+      "yi_playmusic.html",
+      "yiyuan.html",
+      "local.html"
+    ]
+  },
+  "yi_playmusic.html": {
+    "resources": [
+      "img/qixin.png",
+      "img/talk.png",
+      "img/list.png",
+      "img/dow.png",
+      "yi_qqmusic.html",
+      "img/menu.png",
+      "img/xx2.jpg",
+      "img/cp.png",
+      "img/liuyan.png",
+      "img/main.png",
+      "img/new.png",
+      "img/about.png"
+    ],
+    "refer": [
+      "yi_qqmusic.html"
+    ]
+  },
+  "yi_question.html": {
+    "resources": [
+      "img/xx2.jpg",
+      "img/cp.png",
+      "img/liuyan.png",
+      "img/main.png",
+      "img/new.png",
+      "img/menu.png",
+      "img/about.png",
+      "js/jquery.js",
+      "yiyuan.html",
+      "yi_allque.html"
+    ],
+    "refer": [
+      "yiyuan.html",
+      "yi_allque.html"
+    ]
+  },
+  "new.html": {
+    "resources": [
+      "img/xx2.jpg",
+      "img/cp.png",
+      "img/liuyan.png",
+      "img/main.png",
+      "img/new.png",
+      "img/menu.png",
+      "img/about.png",
+      "index.html",
+      "newinfo.html"
+    ],
+    "refer": [
+      "index.html",
+      "newinfo.html"
+    ]
+  },
+  "address.html": {
+    "resources": [
+      "img/xx2.jpg",
+      "img/cp.png",
+      "img/liuyan.png",
+      "img/main.png",
+      "img/new.png",
+      "img/menu.png",
+      "img/about.png",
+      "icon/iconfont.woff",
+      "xml/studens_phone.xml",
+      "imgphone/pa.jpg",
+      "imgphone/p.jpg",
+      "imgphone/l.jpg",
+      "imgphone/tom.jpg",
+      "imgphone/h.jpg",
+      "imgphone/z.jpg",
+      "imgphone/x.jpg",
+      "imgphone/oumei.jpg",
+      "mobile_info.html",
+      "p.html",
+      "index.html"
+    ],
+    "refer": [
+      "p.html",
+      "index.html"
+    ]
+  },
+  "p.html": {
+    "resources": [
+      "img/xx2.jpg",
+      "imgphone/p.jpg",
+      "img/cp.png",
+      "img/liuyan.png",
+      "img/main.png",
+      "img/new.png",
+      "img/menu.png",
+      "img/about.png",
+      "address.html",
+      "video/a.MP4"
+    ],
+    "refer": [
+      "address.html"
+    ]
+  },
+  "local.html": {
+    "resources": [
+      "img/lcmus.png",
+      "img/cp.png",
+      "img/liuyan.png",
+      "img/bg4.jpg",
+      "img/bg.jpg",
+      "img/about.png",
+      "img/xx2.jpg",
+      "img/refresh.png",
+      "img/main.png",
+      "img/lcmv.png",
+      "img/new.png",
+      "img/menu.png",
+      "img/bg2.jpg",
+      "yi_qqmusic.html",
+      "index.html"
+    ],
+    "refer": [
+      "yi_qqmusic.html",
+      "index.html"
+    ]
+  },
+  "yiyuan.html": {
+    "resources": [
+      "yi_question.html",
+      "img/Music.png",
+      "img/Movie.png",
+      "img/Action.png",
+      "img/Star.png",
+      "img/question.png",
+      "yi_qqmusic.html",
+      "index.html",
+      "img/share.png",
+      "img/m6.jpg",
+      "yi_allque.html",
+      "img/bg4.jpg"
+    ],
+    "refer": [
+      "yi_question.html",
+      "yi_qqmusic.html",
+      "index.html",
+      "yi_allque.html"
+    ]
+  },
+  "tu_story.html": {
+    "resources": [
+      "tuling.html"
+    ],
+    "refer": [
+      "tuling.html"
+    ]
+  },
+  "yi_allque.html": {
+    "resources": [
+      "icon/iconfont.woff",
+      "yi_question.html",
+      "img/xx2.jpg",
+      "img/cp.png",
+      "img/liuyan.png",
+      "img/main.png",
+      "img/new.png",
+      "img/menu.png",
+      "img/about.png",
+      "index.html",
+      "yiyuan.html"
+    ],
+    "refer": [
+      "yi_question.html",
+      "index.html",
+      "yiyuan.html"
+    ]
+  },
+  "newinfo.html": {
+    "resources": [
+      "img/xx2.jpg",
+      "img/cp.png",
+      "img/liuyan.png",
+      "img/main.png",
+      "img/new.png",
+      "img/menu.png",
+      "new.html",
+      "img/about.png",
+      "index.html"
+    ],
+    "refer": [
+      "new.html",
+      "index.html"
+    ]
+  },
+  "testnew.html": {
+    "resources": [
+      "img/xx2.jpg",
+      "img/cp.png",
+      "img/liuyan.png",
+      "img/main.png",
+      "img/new.png",
+      "img/menu.png",
+      "img/about.png"
+    ],
+    "refer": []
+  }
+}

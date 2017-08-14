@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title></title>
+		<!-- 引入 jQuery Mobile 样式 -->
+<link rel="stylesheet" href="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+<!-- 引入 jQuery 库 -->
+<script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<!-- 引入 jQuery Mobile 库 -->
+<script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+<style>
+.ui-bar-f {
+    color: white;
+  background-color:#00CACA ;
+}
+
+.ui-body-f {
+    font-weight: bold;
+	color: 	#FFFF93;
+	
+}
+.ui-page-theme-f {
+   ·font-weight: bold;
+    color: white;
+    background-image:url(img/xx2.jpg) ;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.menu{
+	position: fixed;
+	left: 0px;
+	bottom: 30%;
+	z-index: 10;
+	/*background:#FFAD86;*/
+	background:	#FF2D2D ;
+	width:45px ;
+	height: 45px;
+	border-bottom-right-radius: 20px;
+	border-top-right-radius: 18px;
+}
+
+.menu img{
+	width: 40px;
+	height:40px;
+	position: relative;
+	top: 2px;
+}
+
+#newtitle{
+	text-align: center;
+	color:#FF3333 ;
+	font-size: 20dp;
+	font-family: "微软雅黑";
+	animation-name: mytitle;
+	animation-duration: 3s;
+	animation-timing-function: linear;
+	animation-delay: 0s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-play-state: running;
+
+}
+
+@keyframes mytitle /*  */
+{
+	0%{
+			transform:scale(0.8);
+		  /*box-shadow:   X轴偏移量 Y轴偏移量 阴影模糊半径 阴影扩展半径 阴影颜色;  */
+		 text-shadow: 0px 2px 2px #FFFF99;
+		 color: white;
+	}
+	
+	50%  {
+		transform:scale(1.2);
+		text-shadow: 5px 5px 5px #FFFF99;
+		color: red;
+		}
+	
+	100% {
+		transform:scale(0.8);
+		text-shadow: 0px 2px 2px #FFFF99;
+		color: #FFFF33;
+		}
+}
+
+#box{
+		width: 100%;
+ 		
+ 		
+ 		/*border:;*/
+ 	
+}
+#box-icon{
+	width: auto;
+	margin: 15px 0px;
+	
+	/*border: 1px solid white;*/
+	/*border: 1px solid white;*/
+}
+.title{
+	display: block;
+	border: 1px solid white;
+	padding: 20px;
+	border-radius: 10px;
+	cursor: pointer;
+	background: rgba(0,151,100,0.1);
+}
+.title:hover{
+	background:rgba(0,151,100,0.5) ;
+}
+.answer{
+	display:none;
+	color: 	#FFFF6F;
+	font-size: 18px;
+	text-align: center;
+}
+.ch{
+	display: block;
+}
+#box-icon:hover{
+	display: block;
+}
+.ch1{
+	display:none;
+}
+.bor{
+	border: none;
+}
+#font{
+	color:#FAF4FF;
+}
+.border{
+	position: relative;
+	margin-top: 26px;
+}
+
+.border ul li:hover{
+	background: rgba(0,151,100,0.2);
+	
+}
+</style>
+	</head>
+	<body>
+		<!-- 页面开始 -->
+<div id="question" data-role="page" data-theme="f">
+	
+	 <div data-role="panel" id="myPanel" data-swipe-close="true" data-display="push"> 
+	 	<div class="border">
+	    <ul data-role="listview" >
+		      <li ><a href="index.html" data-ajax="false" id="font"><img src="img/main.png"  class="ui-li-icon" >首页</a></li>
+		      <li><a href="newinfo.html" data-ajax="false" id="font"><img src="img/new.png" class="ui-li-icon" data-transition="silde">新闻动态</a></li>
+		      <li><a href="#" data-ajax="false" id="font"><img src="img/cp.png" class="ui-li-icon">产品展示</a></li>
+		      <li><a href="about.html" data-ajax="false" id="font"><img src="img/about.png" class="ui-li-icon">关于我们</a></li>
+		      <li><a href="liuyan.html" data-ajax="false" id="font"><img src="img/liuyan.png"  class="ui-li-icon">留言板</a></li>
+    	</ul>
+    	</div>
+  	</div> 
+	
+	
+	
+	
+<!-- 头部开始 -->
+    <div data-role="header" data-theme="f" >
+        <a href="#page1" class="ui-btn ui-corner-all ui-shadow ui-icon-back ui-btn-icon-left ui-btn-icon-notext bor" data-transition="flip" onclick="goBack()">主页</a>
+    <h1>好随意</h1>
+    <a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-search ui-btn-icon-left ui-btn-icon-notext bor">搜索</a>
+    </div>
+<!-- 头部结束 -->
+    <div data-role="content" >
+
+    	 <div id="contentview">
+    	 	
+    	 </div>
+    
+       <div class="menu">
+    		<a href="#myPanel" >
+    		<img src="img/menu.png"/>
+    		</a>
+  		</div>
+  		
+    
+    </div>
+<!-- 底部开始 -->
+   <div data-role="footer" data-theme="f" data-position="fixed" style='display: none;'>
+    	<h2>&copy;byhaosuiyi</h2>
+    </div>
+<!-- 底部结束 -->
+</div>
+	</body>
+</html>
+<script>
+
+
+  $("#question").on("pageinit",playques_create);
+  
+  function playques_create(e)
+  {		
+	  var  hrefValue= $.mobile.path.parseUrl(e.target.baseURI).href;  
+	 //http://127.0.0.1:8020/Atest/yi_question.html?id=zmmy
+	  	
+	  	var  data=parseUrl(hrefValue); 
+	 	var mid=data[1];
+//	 	alert(mid);
+	  	myfunction(mid);
+		
+  }
+ 
+  
+  
+  function parseUrl(hrefValue)
+  {
+	  var  strs=new Array();
+	  if(hrefValue.indexOf("?")!=-1)
+	  {
+	  	var  str=hrefValue.substring(hrefValue.indexOf("?")+1); 
+		 
+		 strs=str.split("=");
+	  }
+	 return strs;
+	 
+	  
+  }
+
+
+	function myfunction(mid){	
+	
+		$.ajax({
+			type : "post",
+			url : "http://route.showapi.com/151-4",
+			data:{
+						"showapi_appid" : "39112",
+						"showapi_sign" : "6dc193212c1b447e81f99675f0519378",
+						"typeId" :mid
+						
+					},
+			dataType : "json",
+			beforeSend : function() {
+							("正在请求猜一猜资源，请稍后...");
+						},
+			success : function(data){
+				//alert(data);
+				var  datas="<div  id='box'>";	
+				$.each(data.showapi_res_body.pagebean.contentlist,function(index,row){	
+						datas+="<div  id='box-icon'>";		
+						datas+="<span class='title' onclick=\"hideA('"+index+"')\")'>"+row.title+"</span>";
+						datas+="<span class='answer' >"+row.answer+"</span>";
+						
+						datas+="</div>";
+				});
+				
+					 datas+="</div>";
+					 $("#contentview").html(datas);			
+					$("#contentview").trigger("create");
+					
+	
+					
+			},
+			error:function(){
+				alert('fail');
+			}
+	});
+		
+		
+	}
+	function hideA(index){
+		//	alert(index);
+			$(".answer").eq(index).addClass("ch");
+			$(".answer").eq(index).siblings(".answer").removeClass("ch");
+		}	
+	
+	function goBack(){
+		window.history.back();
+	}
+	
+</script>

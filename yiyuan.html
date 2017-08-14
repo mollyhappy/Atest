@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title></title>
+		<!-- 引入 jQuery Mobile 样式 -->
+<link rel="stylesheet" href="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+<!-- 引入 jQuery 库 -->
+<script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<!-- 引入 jQuery Mobile 库 -->
+<script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+<style>
+
+.ui-bar-f {
+    color: white;
+  background-color:#00CACA ;
+}
+
+.ui-body-f {
+    font-weight: bold;
+	color: 	#FFFF93;
+	
+}
+.ui-page-theme-f {
+   font-weight: bold;
+    color: white;
+    background: url(img/xx2.jpg) ;
+	background-size: 100% 120%;
+	background-repeat: no-repeat;
+	animation-name: lunbo;
+	animation-duration: 6s;
+	animation-timing-function: linear;
+	animation-delay: 0s;
+	animation-iteration-count:2;
+	animation-direction:alternate;
+	animation-play-state: running;
+	animation-fill-mode:none;
+	
+}
+
+@keyframes lunbo 
+{
+	0%{
+		background: url(img/xx2.jpg) no-repeat;
+		background-size: 120% 120% ;
+	
+	}
+
+	50%{
+		background: url(img/bg4.jpg) no-repeat;
+		background-size: 120% 100%;
+		}
+	
+	100% {
+		background: url(img/m6.jpg) no-repeat;
+		background-size: 120% 150%;
+		}
+}
+
+.border{
+	position: relative;
+	margin-top: 26px;
+}
+
+.border ul li:hover{
+	background:rgba(255,255,255,0.5);
+	
+}
+
+
+.menu{
+	position: fixed;
+	left: 0px;
+	bottom: 30%;
+	z-index: 10;
+	/*background:#FFAD86;*/
+	background:	#FF2D2D ;
+	width:45px ;
+	height: 45px;
+	border-bottom-right-radius: 20px;
+	border-top-right-radius: 18px;
+}
+
+.menu img{
+	width: 40px;
+	height:40px;
+	position: relative;
+	top: 2px;
+}
+.ui-grid-a{
+	margin-top: 50px;
+	margin-left: 35px;
+	/*margin-right: 25px;*/
+}
+
+.ui-block-a, .ui-block-b{
+  /*  background:rgba(100,100,180,0.1);*/
+    /*border: 1px solid #FFFFFF;*/
+    /*height: 100px;*/
+    font-weight: bold;
+    text-align: center;
+   /* padding: 30px;*/
+}
+
+.ui-btn{
+	border: none;
+}
+.bird{
+	border: 1px solid #FFFFFF;
+	width:100px;
+	height: 100px;
+	padding: 0px;
+	margin: 0px auto;
+	background: rgba(120,184,228,0.1);
+	border-radius: 50%!important;
+}
+
+
+.ui-block-a a:hover{
+	animation-name: silde;
+	animation-duration: 3s;
+	animation-timing-function: linear;
+	animation-delay: 0s;
+	animation-iteration-count: 1;
+	animation-direction:alternate;
+	animation-play-state: running;
+	animation-fill-mode:none;
+}
+
+@keyframes silde 
+{
+	0%{
+		
+		transform: scale(0.5) rotate(120deg);
+		box-shadow:0px 0px 4px 3px #F0F8FF;
+	}
+	25%{
+		
+		transform: scale(0.8) rotate(240deg);
+		box-shadow:0px 0px 5px 4px #F0F8FF;
+	}
+	50%{
+		
+		transform: scale(1.0) rotate(360deg);
+		box-shadow:0px 0px 6px 5px #F0F8FF;
+		}
+	75%{
+		
+		transform: scale(0.8) rotate(240deg);
+		box-shadow:0px 0px 5px 4px #F0F8FF;
+		}
+	100% {
+		
+		transform: scale(0.5) rotate(120deg);
+		box-shadow:0px 0px 4px 3px #F0F8FF;
+		}
+		
+}
+
+
+.ui-block-a img{
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: 5px;
+	left: 27px;
+}
+.ui-block-a a h4{
+	display: block;
+	text-align: center;
+	line-height:90px;
+	color:#FFFF99;
+}
+
+.ui-block-b img{
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: 5px;
+	left: 27px;
+}
+.ui-block-b a h4{
+	display: block;
+	text-align: center;
+	line-height:90px;
+	color:#FFFF99;
+}
+.ui-block-b a:hover{
+	animation-name: sildeb;
+	animation-duration: 3s;
+	animation-timing-function: linear;
+	animation-delay: 0s;
+	animation-iteration-count: 1;
+	animation-direction:alternate;
+	animation-play-state: running;
+	animation-fill-mode:none;
+}
+
+@keyframes sildeb
+{
+	0%{
+		
+		transform: scale(0.5) rotate(120deg);
+		box-shadow:0px 0px 4px 3px #F0F8FF;
+	}
+	25%{
+		
+		transform: scale(0.8) rotate(240deg);
+		box-shadow:0px 0px 5px 4px #F0F8FF;
+	}
+	50%{
+		
+		transform: scale(1.0) rotate(360deg);
+		box-shadow:0px 0px 6px 5px #F0F8FF;
+		}
+	75%{
+		
+		transform: scale(0.8) rotate(240deg);
+		box-shadow:0px 0px 5px 4px #F0F8FF;
+		}
+	100% {
+		
+		transform: scale(0.5) rotate(120deg);
+		box-shadow:0px 0px 4px 3px #F0F8FF;
+		}
+		
+}
+
+.title p{
+	display: block;
+	color: #FFFFDF;
+	font-family:"estrangelo edessa";
+	font-size: 16px;
+	position: absolute;
+	left: 10%;
+	top: 50px;
+}
+
+
+#font{
+	color:#FAF4FF;
+}
+.border{
+	position: relative;
+	margin-top: 26px;
+}
+
+.border ul li:hover{
+	background: rgba(0,151,100,0.2);
+	
+}
+
+
+
+
+</style>
+	</head>
+	<body>
+		<!-- 页面开始 -->
+<div id="yiyuan" data-role="page" data-theme="f">
+	
+	 <div data-role="panel" id="myPanel" data-swipe-close="true" data-display="push"> 
+	 	<div class="border">
+	    <ul data-role="listview" >
+		      <li ><a href="index.html" data-ajax="false" id="font"><img src="img/main.png"  class="ui-li-icon" >首页</a></li>
+		      <li><a href="newinfo.html" data-ajax="false" id="font"><img src="img/new.png" class="ui-li-icon" data-transition="silde">新闻动态</a></li>
+		      <li><a href="#" data-ajax="false" id="font"><img src="img/cp.png" class="ui-li-icon">产品展示</a></li>
+		      <li><a href="about.html" data-ajax="false" id="font"><img src="img/about.png" class="ui-li-icon">关于我们</a></li>
+		      <li><a href="liuyan.html" data-ajax="false" id="font"><img src="img/liuyan.png"  class="ui-li-icon">留言板</a></li>
+    	</ul>
+    	</div>
+  	</div> 
+	
+	
+	
+	
+<!-- 头部开始 -->
+    <div data-role="header" data-theme="f" >
+        <a href="#page1" class="ui-btn ui-corner-all ui-shadow ui-icon-back ui-btn-icon-left ui-btn-icon-notext " data-transition="flip" onclick="goBack()">主页</a>
+    <h1>好随意</h1>
+    <a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-search ui-btn-icon-left ui-btn-icon-notext">搜索</a>
+    </div>
+<!-- 头部结束 -->
+    <div data-role="main" class="ui-content">
+    	<div class="title">
+    		<p>易源应用</p>
+    	</div>
+		<!-- 网格开始 -->
+			<div class="ui-grid-a">
+				<div class="ui-block-a">
+					<a href="#" class="ui-btn ui-corner-all ui-shadow bird">
+						<img src="img/Movie.png" >
+						<h4 >Movie</h4>
+					</a>	
+				</div>
+				<div class="ui-block-b">
+					<a href="yi_qqmusic.html" class="ui-btn ui-corner-all ui-shadow bird" data-ajax="false">
+						<img src="img/Music.png" >
+						<h4>Music</h4>
+					</a>
+				</div>
+			</div>
+			<!-- 网格结束 -->
+			<!-- 网格开始 -->
+			<div class="ui-grid-a">
+				<div class="ui-block-a">
+					<a href="#" class="ui-btn ui-corner-all ui-shadow bird">
+						<img src="img/share.png" >
+						<h4 class="tet">Shareyi</h4>
+					</a>	
+				</div>
+				<div class="ui-block-b">
+					<a href="#" class="ui-btn ui-corner-all ui-shadow bird">
+						<img src="img/Star.png" >
+						<h4>Star</h4>
+					</a>
+				</div>
+			</div>
+			<!-- 网格结束 -->
+			<!-- 网格开始 -->
+			<div class="ui-grid-a">
+				<div class="ui-block-a">
+					<a href="yi_allque.html" class="ui-btn ui-corner-all ui-shadow bird" data-ajax="false">
+						<img src="img/question.png" >
+						<h4>Question</h4>
+					</a>
+				</div>
+				<div class="ui-block-b">
+					<a href="#" class="ui-btn ui-corner-all ui-shadow bird">
+						<img src="img/Action.png" >
+						<h4>Action</h4>
+					</a>
+				</div>
+			</div>
+			<!-- 网格结束 -->
+			
+			
+			
+	    
+       <div class="menu">
+    		<a href="#myPanel" >
+    		<img src="img/menu.png"/>
+    		</a>
+  		</div>
+  		
+    
+    </div>
+<!-- 底部开始 -->
+   <div data-role="footer" data-theme="f" data-position="fixed" >
+    	<h2>&copy;byhaosuiyi</h2>
+    </div>
+<!-- 底部结束 -->
+</div>
+	</body>
+</html>
+<script>
+	function goBack(){
+		window.history.back();
+	}
+</script>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title></title>
+		<!-- 引入 jQuery Mobile 样式 -->
+	<link rel="stylesheet" href="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+<!-- 引入 jQuery 库 -->
+<script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<!-- 引入 jQuery Mobile 库 -->
+<script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+<style>
+.ui-bar-f {
+    color: white;
+  background-color:#00CACA ;
+}
+
+.ui-body-f {
+    font-weight: bold;
+	color: 	#FFFF93;
+	
+}
+.ui-page-theme-f {
+   ·font-weight: bold;
+    color: white;
+    background-image:url(img/xx2.jpg) ;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.menu{
+	position: fixed;
+	left: 0px;
+	bottom: 30%;
+	z-index: 10;
+	/*background:#FFAD86;*/
+	background:	#FF2D2D ;
+	width:45px ;
+	height: 45px;
+	border-bottom-right-radius: 20px;
+	border-top-right-radius: 18px;
+}
+
+.menu img{
+	width: 40px;
+	height:40px;
+	position: relative;
+	top: 2px;
+}
+
+
+.fonav{
+	width: 100%;
+	position: fixed;
+
+	/*bottom: 20px;*/
+}
+.fonav ul{
+	
+	width: 100%;
+	margin:5px -35px;
+}
+.fonav ul li{
+		
+	width: 24%;
+	float: left;
+	border: 1px solid red;
+	list-style: none;
+	position: relative;
+}
+
+.fonav ul li a{
+	font-family: 'iconfont';
+	text-align: center;
+	font-size: 16px;
+	text-decoration: none;
+	color:grey;
+	position: absolute;
+	left: 24%;
+	bottom: 8px;
+	color: 	#9D9D9D;
+}
+.fonav ul li p{
+	position: absolute;
+	left: 10%;
+	bottom: 2px;
+	font-size: 22px;
+}
+.fonav ul li a:hover{
+	color: 	#00A600;
+}
+
+@font-face {
+  font-family: 'iconfont';  /* project id 277875 */
+  src: url('./icon/iconfont.eot');
+  src: url('./icon/iconfont.eot?#iefix') format('embedded-opentype'),
+  url('./icon/iconfont.woff') format('woff'),
+  url('./icon/iconfontttf') format('truetype'),
+  url('./icon/iconfont.svg#iconfont') format('svg');
+}
+
+.list{
+	margin: 0px 0px 15% 0px;
+}
+.bor{
+	border: none;
+}
+
+.add{
+	border: none;
+}
+.add li .img{
+	height: 100%;
+	width: 100%;
+}
+#font{
+	color:#FAF4FF;
+}
+.border{
+	position: relative;
+	margin-top: 26px;
+}
+
+.border ul li:hover{
+	background: rgba(0,151,100,0.2);
+	
+}
+
+
+
+</style>
+	</head>
+	<body>
+		<!-- 页面开始 -->
+<div id="address" data-role="page" data-theme="f">
+	
+	 <div data-role="panel" id="myPanel" data-swipe-close="true" data-display="push"> 
+	 	<div class="border">
+	    <ul data-role="listview" >
+		      <li ><a href="index.html" data-ajax="false" id="font"><img src="img/main.png"  class="ui-li-icon" >首页</a></li>
+		      <li><a href="newinfo.html" data-ajax="false" id="font"><img src="img/new.png" class="ui-li-icon" data-transition="silde">新闻动态</a></li>
+		      <li><a href="#" data-ajax="false" id="font"><img src="img/cp.png" class="ui-li-icon">产品展示</a></li>
+		      <li><a href="about.html" data-ajax="false" id="font"><img src="img/about.png" class="ui-li-icon">关于我们</a></li>
+		      <li><a href="liuyan.html" data-ajax="false" id="font"><img src="img/liuyan.png"  class="ui-li-icon">留言板</a></li>
+    	</ul>
+    	</div>
+  	</div> 
+	
+
+	
+<!-- 头部开始 -->
+    <div data-role="header" data-theme="f" >
+        <a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-back ui-btn-icon-left ui-btn-icon-notext bor" data-transition="flip" onclick="goBack()">主页</a>
+    <h1>好随意</h1>
+    <a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-search ui-btn-icon-left ui-btn-icon-notext bor">搜索</a>
+    </div>
+<!-- 头部结束 -->
+    <div data-role="content">
+    	
+		<div class="ui-field-contain">
+	        <label for="search"></label>
+	        <input type="search" name="search" id="search" placeholder="搜索联系人..." onkeyup="mufunction()" >
+	    </div>
+	    	
+	    <div class="list">
+	    	
+	    </div>
+	    	
+	    
+	       <div class="menu">
+	    		<a href="#myPanel" >
+	    		<img src="img/menu.png"/>
+	    		</a>
+	  		</div>
+  		
+   
+<!-- 底部开始 -->
+   <div data-role="footer"  data-position="fixed" >
+    	<div class="fonav">
+	      <ul >
+		      <li>
+		      	<a href="#">
+		      	<p>&#xe631;</p>拨号
+		     	 </a>
+		      </li>
+		      <li><a href="#"><p>&#xe60e;</p>联系人</a></li>
+		      <li><a href="#"><p>&#xe61a;</p>群组</a></li>
+		      <li><a href="#"><p>&#xe6aa;</p>收藏</a></li>
+    	</ul>
+    	</div>
+    </div>
+<!-- 底部结束 -->
+</div>
+	</body>
+</html>
+<script>
+	$("#address").on("pagecreate",addre_create);
+	function addre_create(){
+		$.ajax({
+			 type:'post',
+			 url:'xml/studens_phone.xml',
+			 dataType:'xml',
+			  success:function(data)
+			 {
+			 	var datas="<div data-role='collapsible-set' data-theme='a' data-content-theme='f' >";
+				
+				$(data).find("stu").each(function(){
+					
+					
+					var  linkphone=$(this).children("phonenumber").text();
+					
+					var callphone="tel:"+linkphone;
+					var smsphone="sms:"+linkphone;
+					var  path="./imgphone/"+$(this).children("facepath").text();
+					var link=$(this).children("link").text();
+					datas+="<div data-role='collapsible' data-collapsed='true'>";
+					datas+="<h3>"+$(this).children("name").text()+"</h3>";
+					datas+=" <ul data-role='listview' data-inset='true' data-divider-theme='b' class='add'>";
+					datas+="<li><a href='"+link+"' data-ajax='false'><img   src='"+path +"' cLass='img'></a></li>";
+					datas+="<li><a href='"+callphone+"'>call: "+linkphone+"</a></li>";
+					datas+="<li><a href='"+smsphone+"'>sms:"+linkphone+"</a></li>";
+					datas+="</ul>";
+					datas+="</div>";
+				});
+				
+				
+				 datas+="</div>";
+				
+				$(".list").html(datas);
+				
+				$(".list").trigger("create");
+				 
+			 },
+			error:function(){
+				//alert("error");
+			}
+			
+			
+		});
+	}
+	function goBack(){
+		window.history.back();
+	}
+	
+	
+	
+</script>

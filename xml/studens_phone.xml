@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<stus>
+	<stu>
+		<name>彭于晏</name>
+		<phonenumber>18351931765</phonenumber>
+		<facepath>p.jpg</facepath>
+		<link>p.html</link>
+	</stu>
+	<stu>
+		<name>张碧晨</name>
+		<phonenumber>1391321090</phonenumber>
+		<facepath>z.jpg</facepath>
+		<link>cl.html</link>
+	</stu>
+	<stu>
+		<name>胡歌</name>
+		<phonenumber>1391321091</phonenumber>
+		<facepath>h.jpg</facepath>
+		<link>tp.html</link>
+	</stu>
+	<stu>
+		<name>刘亦菲</name>
+		<phonenumber>17302522753</phonenumber>
+		<facepath>l.jpg</facepath>
+		<link>cpp.html</link>
+	</stu>
+	<stu>
+		<name>薛之谦</name>
+		<phonenumber>1391321093</phonenumber>
+		<facepath>x.jpg</facepath>
+		<link>zxt.html</link>
+	</stu>
+	<stu>
+		<name>Alan Walker</name>
+		<phonenumber>1391321093</phonenumber>
+		<facepath>oumei.jpg</facepath>
+		<link>zxt.html</link>
+	</stu>
+	<stu>
+		<name>Tom Hiddleston</name>
+		<phonenumber>1391321093</phonenumber>
+		<facepath>tom.jpg</facepath>
+		<link>zxt.html</link>
+	</stu>
+	<stu>
+		<name>ParkChanyeol</name>
+		<phonenumber>1391321093</phonenumber>
+		<facepath>pa.jpg</facepath>
+		<link>zxt.html</link>
+	</stu>
+	<stu>
+		<name>林更新</name>
+		<phonenumber>1391321093</phonenumber>
+		<facepath>pa.jpg</facepath>
+		<link>zxt.html</link>
+	</stu>
+	<stu>
+		<name>赵丽颖</name>
+		<phonenumber>1391321093</phonenumber>
+		<facepath>pa.jpg</facepath>
+		<link>zxt.html</link>
+	</stu>
+</stus>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title></title>
+		<!-- 引入 jQuery Mobile 样式 -->
+<link rel="stylesheet" href="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+<!-- 引入 jQuery 库 -->
+<script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<!-- 引入 jQuery Mobile 库 -->
+<script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+<style>
+.ui-bar-f {
+    color: white;
+  background-color:#00CACA ;
+}
+
+.ui-body-f {
+    font-weight: bold;
+	color: 	#FFFF93;
+	
+}
+.ui-page-theme-f {
+   ·font-weight: bold;
+    color: white;
+    background-image:url(img/xx2.jpg) ;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.menu{
+	position: fixed;
+	left: 0px;
+	bottom: 30%;
+	z-index: 10;
+	/*background:#FFAD86;*/
+	background:	#FF2D2D ;
+	width:45px ;
+	height: 45px;
+	border-bottom-right-radius: 20px;
+	border-top-right-radius: 18px;
+}
+
+.menu img{
+	width: 40px;
+	height:40px;
+	position: relative;
+	top: 2px;
+}
+
+#newtitle{
+	margin-top: 10px;
+	text-align: center;
+	color:#FF3333 ;
+	font-size: 18px;
+	font-family: "微软雅黑";
+	animation-name: mytitle;
+	animation-duration: 3s;
+	animation-timing-function: linear;
+	animation-delay: 0s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-play-state: running;
+}
+
+@keyframes mytitle /*  */
+{
+	0%{
+			transform:scale(0.8);
+		  /*box-shadow:   X轴偏移量 Y轴偏移量 阴影模糊半径 阴影扩展半径 阴影颜色;  */
+		 text-shadow: 0px 2px 2px #FFFF99;
+		 color: white;
+	}
+	
+	50%  {
+		transform:scale(1.2);
+		text-shadow: 5px 5px 5px #FFFF99;
+		color: red;
+		}
+	
+	100% {
+		transform:scale(0.8);
+		text-shadow: 0px 2px 2px #FFFF99;
+		color: #FFFF33;
+		}
+}
+
+#newlists{
+	width: 100%;
+}
+.list{
+	background:  rgba(0,151,100,0.1);
+	padding: 10px 15px;
+	border-bottom: 1px dashed #FBE26F;
+	height: 34px;
+}
+
+.list a{
+	text-decoration: none;
+	color: 	#6C6C6C;
+}
+.list:hover{
+	background:  rgba(0,151,100,0.3);
+}
+
+.list a:hover{
+	color:#AE0000;
+	
+}
+.bor{
+	border: none;
+}
+#font{
+	color:#FAF4FF;
+}
+.border{
+	position: relative;
+	margin-top: 26px;
+}
+
+.border ul li:hover{
+	background: rgba(0,151,100,0.2);
+	
+}
+</style>
+
+	</head>
+
+	<body>
+		<!-- 页面开始 -->
+<div id="news" data-role="page" data-theme="f">
+
+	
+	 <div data-role="panel" id="myPanel" data-swipe-close="true" data-display="push"> 
+	 	<div class="border">
+	     <ul data-role="listview" >
+		      <li ><a href="index.html" data-ajax="false" id="font"><img src="img/main.png"  class="ui-li-icon" >首页</a></li>
+		      <li><a href="newinfo.html" data-ajax="false" id="font"><img src="img/new.png" class="ui-li-icon" data-transition="silde">新闻动态</a></li>
+		      <li><a href="#" data-ajax="false" id="font"><img src="img/cp.png" class="ui-li-icon">产品展示</a></li>
+		      <li><a href="about.html" data-ajax="false" id="font"><img src="img/about.png" class="ui-li-icon">关于我们</a></li>
+		      <li><a href="liuyan.html" data-ajax="false" id="font"><img src="img/liuyan.png"  class="ui-li-icon">留言板</a></li>
+    	</ul>
+    	</div>
+  	</div> 
+	
+	
+	
+	
+<!-- 头部开始 -->
+    <div data-role="header" data-theme="f" >
+        <a href="#page1" class="ui-btn ui-corner-all ui-shadow ui-icon-back ui-btn-icon-left ui-btn-icon-notext bor" data-transition="flip" onclick="goBack()">主页</a>
+    <h1>好随意</h1>
+    <a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-search ui-btn-icon-left ui-btn-icon-notext bor">搜索</a>
+    </div>
+<!-- 头部结束 -->
+    <div data-role="content">
+	
+		<div id="">
+			<p id="newtitle">时事热点</p>	
+		</div>
+   			
+   		
+   
+   
+    	<div id="newlists">
+    		
+    	</div>
+	
+    	
+       <div class="menu">
+    		<a href="#myPanel" >
+    		<img src="img/menu.png"/>
+    		</a>
+  		</div>
+  		
+    
+    </div>
+<!-- 底部开始 -->
+   <div data-role="footer" data-theme="f" data-position="fixed" >
+    	<h2>&copy;byhaosuiyi</h2>
+    </div>
+<!-- 底部结束 -->
+</div>
+		
+	</body>
+</html>
+
+	<script>
+		 $("#news").on("pagecreate",news_create);
+		 function news_create(e){
+				  var  hrefValue= $.mobile.path.parseUrl(e.target.baseURI).href;  
+					//alert(hrefValue);
+					//http://127.0.0.1:8020/Atest/new.html?class=internews
+				var data=parseUrl(hrefValue);
+				var classval=data[1];
+				//alert(classval);
+				myfunction(classval);
+					
+		}			
+					
+					 
+  function parseUrl(hrefValue)
+  {
+	  var  strs=new Array();
+	  if(hrefValue.indexOf("?")!=-1)
+	  {
+	  	var  str=hrefValue.substring(hrefValue.indexOf("?")+1); 
+		 
+		 strs=str.split("=");
+	  }
+	 return strs;
+	 
+	  
+  }
+					
+					
+	function myfunction(classval){
+			//alert(classval);
+			var surl="http://news.baidu.com/n?cmd=1"+"&class="+classval+"&tn=rss";
+			//alert(surl);
+				$.post(
+				surl,
+				{},
+				function(data){
+				var datas="<div class='bor'>";	
+					var datas="";
+				$(data).find("item").each(function(){
+					var title=$(this).children("title").text();
+						var links=$(this).children("link").text();
+					datas+="<div class='list'>"
+						datas += "<a  href='"+links+"'>" + title+ "</a>";
+					$("#newlists").append(
+							"<div class='bor'><a  href='"+links+"'>" + title
+										+ "</a></div>");
+						datas+="</div>";
+					});
+						datas+="</div>";
+						$("#newlists").html(datas);
+			
+			},"xml");
+			$("#newlists").addClass("box");
+	}
+					
+
+		 
+		 function goBack(){
+		 	window.history.back();
+		 }
+	</script>

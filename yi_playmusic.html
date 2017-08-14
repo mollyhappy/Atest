@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title></title>
+		<!-- 引入 jQuery Mobile 样式 -->
+	<link rel="stylesheet" href="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+<!-- 引入 jQuery 库 -->
+<script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<!-- 引入 jQuery Mobile 库 -->
+<script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+<style>
+.ui-bar-f {
+    color: white;
+  background-color:#00CACA ;
+}
+
+.ui-body-f {
+    font-weight: bold;
+	color: 	#FFFF93;
+	
+}
+.ui-page-theme-f {
+   ·font-weight: bold;
+    color: white;
+    background-image:url(img/xx2.jpg) ;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.menu{
+	position: fixed;
+	left: 0px;
+	bottom: 30%;
+	z-index: 10;
+	/*background:#FFAD86;*/
+	background:	#FF2D2D ;
+	width:45px ;
+	height: 45px;
+	border-bottom-right-radius: 20px;
+	border-top-right-radius: 18px;
+}
+
+.menu img{
+	width: 40px;
+	height:40px;
+	position: relative;
+	top: 2px;
+}
+/*audio{
+	background: pink;
+}*/
+
+.test{
+	width: 100%;
+	background:rgba(255,255,255,0.3);
+	/*height: 340px;*/
+	position: relative;
+	margin-top: 20px;
+	
+}
+
+#img {
+	width:80% ;
+	height: 80%;
+	background: rgba(0,151,100,0.1);
+	
+	border-radius: 50%;
+	margin: 5% 10%;
+	/*position: absolute;
+	margin-left: 20%;*/
+}
+#image{
+	padding: 20%;
+	width: 60%;
+	height: 60%;
+	border-radius: 50%;
+	animation-name: silde;
+	animation-duration: 6s;
+	animation-timing-function: linear;
+	animation-delay: 0s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-play-state: running;
+	
+}
+@keyframes silde 
+{
+	0%{
+		
+		transform: scale(0.9) rotate(0deg);
+		
+	}
+	/*25%{
+		
+		transform: scale(0.8) rotate(240deg);
+		
+	}*/
+	50%{
+		
+		transform: scale(1.1) rotate(180deg);
+		
+		}
+	/*75%{
+		
+		transform: scale(0.8) rotate(480deg);
+		
+		}*/
+	100% {
+		
+		transform: scale(0.9) rotate(360deg);
+		
+		}
+}
+#name{
+	text-align: center;
+	font-size: 16px;
+	padding-top:10px;
+}
+#icon{
+	/*background: red;*/
+	width: 100%;
+	height: 40px;
+	float: left;
+	position: relative;
+}
+#icon img{
+	display: block;
+	width: 8%;
+	
+}
+#icon img:first-child{
+	position: absolute;
+	top: 2%;
+	left: 18%;
+}
+#icon img:nth-child(2){
+	position: absolute;
+	top: 2%;
+	left: 38%;
+}
+#icon img:nth-child(3){
+	position: absolute;
+	top: 2%;
+	left: 60%;
+}
+
+#icon img:nth-child(4){
+	position: absolute;
+	top: 2%;
+	left: 80%;
+}
+
+
+#icon-img{
+	width: auto;
+	display: block;
+	float: left;
+}
+#play{
+	width: 100%;
+	
+}
+audio{
+	width: 100%;
+	margin-top: 4%;
+
+}
+.bor{
+	border: none;
+}
+
+#font{
+	color:#FAF4FF;
+}
+.border{
+	position: relative;
+	margin-top: 26px;
+}
+
+.border ul li:hover{
+	background: rgba(0,151,100,0.2);
+	
+}
+</style>
+	</head>
+	<body>
+		<!-- 页面开始 -->
+<div id="playmusic" data-role="page" data-theme="f">
+	<script>
+
+  $("#playmusic").on("pageinit",playmusic_create);
+  
+  function playmusic_create(e)
+  {		
+	  var  hrefValue= $.mobile.path.parseUrl(e.target.baseURI).href;  
+	 
+	  	
+	  	var  data=parseUrl(hrefValue); 
+	  	
+	  	var path1=data[1].substring(data[1].indexOf("=")+1);
+	  	
+	  	//alert(path1);
+	 	 var pathurl=path1+"?"+data[2];
+		 var imgpath=data[3];
+		 var name=decodeURI(data[4]) ;
+	  	 //alert(name);
+		$("#playaudio").attr(
+			{"src":pathurl}
+		);
+	  	$("#image").attr(
+			{"src":imgpath}
+		);
+	  	$("#name").text(name);
+	  	
+		$("#contentview").trigger("create");
+		
+		
+  }
+ 
+  
+  
+  function parseUrl(hrefValue)
+  {
+	  var  strs=new Array();
+	  if(hrefValue.indexOf("?")!=-1)
+	  {
+	  	var str=hrefValue.split("?");
+	  }
+	 return str;
+	 
+	  
+  }
+function goBack(){
+		window.history.back();
+	}
+
+</script>
+
+	
+	 <div data-role="panel" id="myPanel" data-swipe-close="true" data-display="push"> 
+	 	<div class="border">
+	     <ul data-role="listview" >
+		      <li ><a href="index.html" data-ajax="false" id="font"><img src="img/main.png"  class="ui-li-icon" >首页</a></li>
+		      <li><a href="newinfo.html" data-ajax="false" id="font"><img src="img/new.png" class="ui-li-icon" data-transition="silde">新闻动态</a></li>
+		      <li><a href="#" data-ajax="false" id="font"><img src="img/cp.png" class="ui-li-icon">产品展示</a></li>
+		      <li><a href="about.html" data-ajax="false" id="font"><img src="img/about.png" class="ui-li-icon">关于我们</a></li>
+		      <li><a href="liuyan.html" data-ajax="false" id="font"><img src="img/liuyan.png"  class="ui-li-icon">留言板</a></li>
+    	</ul>
+    	</div>
+  	</div> 
+	
+	
+	
+	
+<!-- 头部开始 -->
+    <div data-role="header" data-theme="f" >
+        <a href="" class="ui-btn ui-corner-all ui-shadow ui-icon-back ui-btn-icon-left ui-btn-icon-notext bor" data-transition="flip" data-ajax="false" onclick="goBack()">主页</a>
+    <h1>好随意</h1>
+    <a href="" class="ui-btn ui-corner-all ui-shadow ui-icon-search ui-btn-icon-left ui-btn-icon-notext bor" data-direction="reverse" data-ajax="false" data-rel="back">搜索</a>
+    </div>
+<!-- 头部结束 -->
+    <div data-role="content" id="contentview">
+		<div class="test" >
+			<div id="name">
+				
+			</div>
+			<div id="img">
+				<img id="image" />
+			</div>
+			<div id="icon">
+				<div id="icon-img">
+				<img src="img/qixin.png"/>
+				<img src="img/dow.png" />
+				<img src="img/talk.png" />
+				<img src="img/list.png" />
+				</div>
+			</div>
+			
+		</div>
+		
+		<div id="play">
+			<audio id="playaudio" controls="controls" >
+				你的浏览器不支持HTML5的audio标签!
+			</audio>
+		</div>
+    	
+       <div class="menu">
+    		<a href="#myPanel" >
+    		<img src="img/menu.png"/>
+    		</a>
+  		</div>
+  		
+    
+    </div>
+<!-- 底部开始 -->
+   <div data-role="footer" data-theme="f" data-position="fixed" >
+    	<h2>&copy;byhaosuiyi</h2>
+    </div>
+<!-- 底部结束 -->
+</div>
+	</body>
+</html>

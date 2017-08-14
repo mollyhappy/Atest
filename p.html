@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title></title>
+		<!-- 引入 jQuery Mobile 样式 -->
+<link rel="stylesheet" href="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+<!-- 引入 jQuery 库 -->
+<script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<!-- 引入 jQuery Mobile 库 -->
+<script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+<style>
+.ui-bar-f {
+    color: white;
+  background-color:#00CACA ;
+}
+
+.ui-body-f {
+    font-weight: bold;
+	color: 	#FFFF93;
+	
+}
+.ui-page-theme-f {
+   ·font-weight: bold;
+    color: white;
+    background-image:url(img/xx2.jpg) ;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.menu{
+	position: fixed;
+	left: 0px;
+	bottom: 30%;
+	z-index: 10;
+	/*background:#FFAD86;*/
+	background:	#FF2D2D ;
+	width:45px ;
+	height: 45px;
+	border-bottom-right-radius: 20px;
+	border-top-right-radius: 18px;
+}
+
+.menu img{
+	width: 40px;
+	height:40px;
+	position: relative;
+	top: 2px;
+}
+
+#newtitle{
+	margin-top: 10px;
+	text-align: center;
+	color:#FF3333 ;
+	font-size: 18px;
+	font-family: "微软雅黑";
+	animation-name: mytitle;
+	animation-duration: 3s;
+	animation-timing-function: linear;
+	animation-delay: 0s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-play-state: running;
+}
+
+@keyframes mytitle /*  */
+{
+	0%{
+			transform:scale(0.8);
+		  /*box-shadow:   X轴偏移量 Y轴偏移量 阴影模糊半径 阴影扩展半径 阴影颜色;  */
+		 text-shadow: 0px 2px 2px #FFFF99;
+		 color: white;
+	}
+	
+	50%  {
+		transform:scale(1.2);
+		text-shadow: 5px 5px 5px #FFFF99;
+		color: red;
+		}
+	
+	100% {
+		transform:scale(0.8);
+		text-shadow: 0px 2px 2px #FFFF99;
+		color: #FFFF33;
+		}
+}
+
+.mainbg{
+	margin: -20px -10px 0px -14px;
+	padding: 0px !important;
+	width: auto;
+}
+.mainbg a{
+	display: block;
+	background: url(img/bg2.jpg);
+	width: 356px;
+	height: 200px;
+}
+
+.mainbg a{	
+	animation-name: lunbo;
+	animation-duration: 6s;
+	animation-timing-function: linear;
+	animation-delay: 1s;
+	animation-iteration-count: infinite;
+	animation-direction:alternate;
+	animation-play-state: running;
+}
+
+
+@keyframes lunbo 
+{
+	0%{
+		background: url(img/bg4.jpg);
+	}
+
+	50%  {
+		background: url(img/bg.jpg);
+		}
+	100% {
+		background: url(img/bg2.jpg);
+		}
+}
+#info{
+	width: 100%;
+}
+
+#info img{
+	width:85% ;
+	margin-left: 6%;
+	
+}
+
+.intro{
+	color:	#ff7575;
+}
+
+.bor{
+	border: none;
+}
+#font{
+	color:#FAF4FF;
+}
+.border{
+	position: relative;
+	margin-top: 26px;
+}
+
+.border ul li:hover{
+	background: rgba(0,151,100,0.2);
+	
+}
+
+</style>
+
+	</head>
+
+	<body>
+		<!-- 页面开始 -->
+<div id="peoinfo" data-role="page" data-theme="f">
+
+	
+	 <div data-role="panel" id="myPanel" data-swipe-close="true" data-display="push"> 
+	 	<div class="border">
+	     <ul data-role="listview" >
+		      <li ><a href="index.html" data-ajax="false" id="font"><img src="img/main.png"  class="ui-li-icon" >首页</a></li>
+		      <li><a href="newinfo.html" data-ajax="false" id="font"><img src="img/new.png" class="ui-li-icon" data-transition="silde">新闻动态</a></li>
+		      <li><a href="#" data-ajax="false" id="font"><img src="img/cp.png" class="ui-li-icon">产品展示</a></li>
+		      <li><a href="about.html" data-ajax="false" id="font"><img src="img/about.png" class="ui-li-icon">关于我们</a></li>
+		      <li><a href="liuyan.html" data-ajax="false" id="font"><img src="img/liuyan.png"  class="ui-li-icon">留言板</a></li>
+    	</ul>
+    	</div>
+  	</div> 
+	
+	
+	
+	
+<!-- 头部开始 -->
+    <div data-role="header" data-theme="f" >
+        <a href="#page1" class="ui-btn ui-corner-all ui-shadow ui-icon-back ui-btn-icon-left ui-btn-icon-notext bor" data-transition="flip" onclick="goBack()">主页</a>
+    <h1>好随意</h1>
+    <a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-search ui-btn-icon-left ui-btn-icon-notext bor">搜索</a>
+    </div>
+<!-- 头部结束 -->
+    <div data-role="content">
+   			
+    	<div id="info">
+    		<h3>彭于晏</h3>
+    		<img src="imgphone/p.jpg" />
+    		<p>
+    			彭于晏，1982年3月24日出生于台湾澎湖，中国台湾影视男演员、歌手。
+2002年，彭于晏出演了首部电视剧《爱情白皮书》 而踏入演艺圈[1]  。2005年因出演仙侠剧《仙剑奇侠传》中唐钰一角而受到关注。2006年主演剧情片《六号出口》。2007年凭借爱情片《基因决定我爱你》提名第44届台湾电影金马奖最佳新演员，并为金马短片单元制作片头，完成了个人导演处女作[2-3]  。2009年发行首张个人EP《非爱不可》。
+2011年彭于晏凭借励志片《翻滚吧！阿信》提名第48届台湾电影金马奖最佳男主角[4]  。2012年起，相继主演了动作片《寒战》、爱情片《分手合约》等，并凭借动作片《激战》并凭借该片提名第50届台湾电影金马奖及第33届香港电影金像奖最佳男配角[5-6]  。
+2014年主演动作片《黄飞鸿之英雄有梦》并凭借该片提名第34届香港电影金像奖最佳男主角，同年其主演的校园爱情电影《匆匆那年》在中国内地收获5.9亿票房[7]  。2015年主演青春片《破风》[8]  。2016年主演的动作警匪片《湄公河行动》突破10亿票房，刷新了华语警匪片票房纪录[9-10]  。
+    		</p>
+    	</div>
+		
+		<div class="intro">
+			<h3>相关内容</h3>
+			<video src="video/a.MP4">
+		
+			</video>
+		</div>
+	
+    	
+       <div class="menu">
+    		<a href="#myPanel" >
+    		<img src="img/menu.png"/>
+    		</a>
+  		</div>
+  		
+    
+    </div>
+<!-- 底部开始 -->
+   <div data-role="footer" data-theme="f" data-position="fixed" >
+    	<h2>&copy;byhaosuiyi</h2>
+    </div>
+<!-- 底部结束 -->
+</div>
+
+	</body>
+</html>
+<script type="text/javascript">
+ 
+ function goBack(){
+ 	window.history.back();
+ }
+
+</script>
+		 
+

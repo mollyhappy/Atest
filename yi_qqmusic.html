@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title></title>
+		<!-- 引入 jQuery Mobile 样式 -->
+<link rel="stylesheet" href="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+<!-- 引入 jQuery 库 -->
+<script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<!-- 引入 jQuery Mobile 库 -->
+<script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+<style>
+.ui-bar-f {
+    color: white;
+  background-color:#00CACA ;
+}
+
+.ui-body-f {
+    font-weight: bold;
+	color: 	#FFFF93;
+	
+}
+.ui-page-theme-f {
+   ·font-weight: bold;
+    color: white;
+    background-image:url(img/xx2.jpg) ;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.menu{
+	position: fixed;
+	left: 0px;
+	bottom: 30%;
+	z-index: 10;
+	/*background:#FFAD86;*/
+	background:	#FF2D2D ;
+	width:45px ;
+	height: 45px;
+	border-bottom-right-radius: 20px;
+	border-top-right-radius: 18px;
+}
+
+.menu img{
+	width: 40px;
+	height:40px;
+	position: relative;
+	top: 2px;
+}
+
+#newtitle{
+	display: block;
+	
+	text-align: center;
+	color:#FF3333 ;
+	font-size: 20dp;
+	font-family: "微软雅黑";
+	animation-name: mytitle;
+	animation-duration: 3s;
+	animation-timing-function: linear;
+	animation-delay: 0s;
+	animation-iteration-count: 2;
+	animation-direction: alternate;
+	animation-play-state: running;
+}
+
+@keyframes mytitle /*  */
+{
+	0%{
+			transform:scale(0.9);
+		  /*box-shadow:   X轴偏移量 Y轴偏移量 阴影模糊半径 阴影扩展半径 阴影颜色;  */
+		 text-shadow: 0px 2px 2px #FFFF99;
+		 color: white;
+	}
+	
+	50%  {
+		transform:scale(1.1);
+		text-shadow: 5px 5px 5px #FFFF99;
+		color: red;
+		}
+	
+	100% {
+		transform:scale(0.9);
+		text-shadow: 0px 2px 2px #FFFF99;
+		color: #FFFF33;
+		}
+}
+
+
+.color1{
+	
+	background: rgba(0,151,100,0.48);
+}
+.color2{
+	background: rgba(0,90,137,0.4);
+}
+
+.color3{
+	background: rgba(255,85,0,0.4);
+}
+.color4{
+	background: rgba(234,74,75,0.4);
+}
+.color5{
+	background: rgba(254,199,47,0.4);
+}
+.color6{
+	background: rgba(40,191,193,0.4);
+}
+.color7{
+	background: rgba(5,216,0,0.5);
+}
+.color8{
+	background: rgba(238,74,23,0.5);
+}
+.color9{
+	background: rgba(17,57,143,0.5);
+}
+.ui-grid-b{
+	margin-top: 25px;
+
+
+}
+
+.ui-grid-b .ui-block-a:hover,.ui-grid-b .ui-block-b:hover,.ui-grid-b .ui-block-c:hover{
+	animation-name: myfirst;
+	animation-duration: 1s;
+	animation-timing-function: linear;
+	animation-delay: 0s;
+	animation-iteration-count: 1;
+	animation-direction: alternate;
+	animation-play-state: running;
+}
+@keyframes myfirst /*  */
+{
+	0%{
+		transform:scale(0.6);
+		  /*box-shadow:   X轴偏移量 Y轴偏移量 阴影模糊半径 阴影扩展半径 阴影颜色;  */
+		  box-shadow:0px 3px 4px 3px #FFFFAA;
+	}
+
+	50%  {
+		transform:scale(0.8);
+		box-shadow:0px 5px 6px 5px  #FFFFAA;
+		}
+	100% {
+		transform:scale(1.0);
+		box-shadow:0px 3px 4px 3px #FFFFAA;
+		}
+}
+.ui-block-a{
+		
+}
+.ui-block-b{
+/*	height: 100px;*/
+}
+.ui-block-c{
+	/*margin: 10px;*/
+}
+.bor{
+	border: none;
+	color: white;
+	font-size: 20px;
+	/*background: none;*/
+}
+.newlist{
+	width: 100%;
+	height: 430px;
+	border-radius: 10px;
+	background: url(img/new1.jpg);
+	opacity: 0.8;
+}
+.newlist:hover{
+	background-position:120% 100% ;
+	/*background-size: 60% 80%;*/
+	transition:background-position 3s;
+}
+#font{
+	color:#FAF4FF;
+}
+.border{
+	position: relative;
+	margin-top: 26px;
+}
+
+.border ul li:hover{
+	background: rgba(0,151,100,0.2);
+	
+}
+</style>
+	</head>
+	<body>
+		<!-- 页面开始 -->
+<div id="qqmusic" data-role="page" data-theme="f">
+	
+	 <div data-role="panel" id="myPanel" data-swipe-close="true" data-display="push"> 
+	 	<div class="border">
+	     <ul data-role="listview" >
+		      <li ><a href="index.html" data-ajax="false" id="font"><img src="img/main.png"  class="ui-li-icon" >首页</a></li>
+		      <li><a href="newinfo.html" data-ajax="false" id="font"><img src="img/new.png" class="ui-li-icon" data-transition="silde">新闻动态</a></li>
+		      <li><a href="#" data-ajax="false" id="font"><img src="img/cp.png" class="ui-li-icon">产品展示</a></li>
+		      <li><a href="about.html" data-ajax="false" id="font"><img src="img/about.png" class="ui-li-icon">关于我们</a></li>
+		      <li><a href="liuyan.html" data-ajax="false" id="font"><img src="img/liuyan.png"  class="ui-li-icon">留言板</a></li>
+    	</ul>
+    	</div>
+  	</div> 
+	
+	
+	
+	
+<!-- 头部开始 -->
+    <div data-role="header" data-theme="f" >
+        <a href="#qqmusic" class="ui-btn ui-corner-all ui-shadow ui-icon-back ui-btn-icon-left ui-btn-icon-notext bor" data-transition="flip" onclick="goBack()">主页</a>
+    	<h1>好随意</h1>
+    	<a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-search ui-btn-icon-left ui-btn-icon-notext bor">搜索</a>
+    </div>
+<!-- 头部结束 -->
+    <div data-role="content" id="contentview">
+    	
+    	
+    	<div class="newlist">
+		<!-- 网格开始 -->
+			<div class="ui-grid-b ">
+				<div class="ui-block-a color1" >
+					<a href="#" class="ui-btn  bird bor" onclick="qqmusic_init(3)">				
+						<h4 id="3">欧美</h4>
+					</a>	
+				</div>
+				<div class="ui-block-b color2">
+					<a href="#" class="ui-btn  bird bor" onclick="qqmusic_init(5)">				
+						<h4 id="5">内地</h4>
+					</a>
+				</div>
+				<div class="ui-block-c color3">
+					<a href="#" class="ui-btn  bird bor" onclick="qqmusic_init(4)">				
+						<h4 id="4">流行榜</h4>
+					</a>
+				</div>
+				
+			</div>
+			<!-- 网格结束 -->
+			<!-- 网格开始 -->
+			<div class="ui-grid-b ">
+				<div class="ui-block-a color4">
+					<a href="#" class="ui-btn  bird bor" onclick="qqmusic_init(6)">				
+						<h4 id="6">港台</h4>
+					</a>	
+				</div>
+				<div class="ui-block-b color5">
+					<a href="#" class="ui-btn  bird bor" onclick="qqmusic_init(16)">				
+						<h4 >韩国</h4>
+					</a>
+				</div>
+				<div class="ui-block-c color6">
+					<a href="#" class="ui-btn  bird bor" onclick="qqmusic_init(17)">				
+						<h4 >日本</h4>
+					</a>
+					
+				</div>
+				
+			</div>
+			<!-- 网格结束 -->
+			<!-- 网格开始 -->
+			<div class="ui-grid-b ">
+				<div class="ui-block-a color7">
+					<a href="#" class="ui-btn  bird bor" onclick="qqmusic_init(26)">				
+						<h4 >热歌</h4>
+					</a>	
+				</div>
+				<div class="ui-block-b color8">
+					<a href="#" class="ui-btn  bird bor" onclick="qqmusic_init(27)">				
+						<h4 >新歌</h4>
+					</a>
+				</div>
+				<div class="ui-block-c color9">
+					<a href="#" class="ui-btn  bird bor" onclick="qqmusic_init(36)">				
+						<h4 >金曲</h4>
+					</a>
+				</div>
+				
+			</div>
+			<!-- 网格结束 -->
+	</div>		
+		
+		
+    
+       <div class="menu">
+    		<a href="#myPanel" >
+    		<img src="img/menu.png"/>
+    		</a>
+  		</div>
+  		
+    
+    </div>
+<!-- 底部开始 -->
+   <div data-role="footer" data-theme="f" data-position="fixed" >
+    	<h2>&copy;byhaosuiyi</h2>
+    </div>
+<!-- 底部结束 -->
+</div>
+	</body>
+</html>
+<script>
+	function qqmusic_init(id){
+		$.ajax({
+			type:"post",
+			url:"http://route.showapi.com/213-4",
+			data:{
+				"showapi_appid" : "39110",
+				"showapi_sign" : "c315bcfc9ad84f459c19b4759f16452a",
+				"topid" : id	
+			},
+			//sriptCharset: 'utf-8',
+			//contentType: "application/x-www-form-urlencoded; charset=gbk", 
+			dataType : "json",
+			beforeSend : function() {
+					//alert("正在请求sQQ音乐服务器资源，请稍后...");
+				},
+			success : function(data) {
+//				$(".ui-grid-b").hide();
+			
+				var  datas="<div data-role='collapsible-set' data-theme='a' data-content-theme='' >";
+				$.each(data.showapi_res_body.pagebean.songlist,function(index,row){
+				var imgpath=row.albumpic_small;
+				//alert(row.url);
+				var target="yi_playmusic.html?urlpath="+row.url;
+				datas+="<div data-role='collapsible' data-collapsed='true'></div>";
+				datas+="<h3>"+row.songname+"</h3>";
+				//alert(row.songname);
+				datas+="<ul data-role='listview' data-inset='true' data-divider-theme='b'>";
+				datas+="<li>";	
+				datas+="<a  href='"+target+"?"+row.albumpic_big+"?"+encodeURI(row.songname) +"' data-ajax='false'><img  src='"+imgpath+"'/><h3>"+row.songname+"</h3><p>"+row.singername+"</p>"
+//				
+				datas+="</a></li>";
+				datas+="</ul>";
+				datas+="</div>";
+				});
+				 datas+="</div>";
+				$("#contentview").html(datas);
+				$("#contentview").trigger("create");
+				
+			},
+			error:function(){
+				alert("error!");
+			}
+		});
+	}
+	function goBack(){
+		window.history.back();
+	}
+	
+	
+</script>

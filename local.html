@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title></title>
+		<!-- 引入 jQuery Mobile 样式 -->
+	<link rel="stylesheet" href="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+<!-- 引入 jQuery 库 -->
+<script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<!-- 引入 jQuery Mobile 库 -->
+<script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+<style>
+.ui-bar-f {
+    color: white;
+  background-color:#00CACA ;
+}
+
+.ui-body-f {
+    font-weight: bold;
+	color: 	#FFFF93;
+	
+}
+.ui-page-theme-f {
+   ·font-weight: bold;
+    color: white;
+    background-image:url(img/xx2.jpg) ;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.menu{
+	position: fixed;
+	left: 0px;
+	bottom: 30%;
+	z-index: 10;
+	/*background:#FFAD86;*/
+	background:	#FF2D2D ;
+	width:45px ;
+	height: 45px;
+	border-bottom-right-radius: 20px;
+	border-top-right-radius: 18px;
+}
+
+.menu img{
+	width: 40px;
+	height:40px;
+	position: relative;
+	top: 2px;
+}
+.mainbg{
+	margin: -20px -12px 0px -12px;
+	padding: 0px !important;
+	width: auto;
+}
+.mainbg a{
+	display: block;
+	background: url(img/bg2.jpg);
+	width: 100%;
+	height: 200px;
+}
+
+.mainbg a{	
+	animation-name: lunbo;
+	animation-duration: 6s;
+	animation-timing-function: linear;
+	animation-delay: 1s;
+	animation-iteration-count: infinite;
+	animation-direction:alternate;
+	animation-play-state: running;
+}
+
+
+@keyframes lunbo 
+{
+	0%{
+		background: url(img/bg4.jpg);
+	}
+
+	50%  {
+		background: url(img/bg.jpg);
+		}
+	100% {
+		background: url(img/bg2.jpg);
+		}
+}
+.ui-grid-a{
+	margin: 10px 0px;
+	width: 100%;
+	
+}
+.ui-grid-a .ui-block-a,.ui-grid-a .ui-block-b{
+	/*border: 1px solid white;*/
+	/*border-bottom: 1px solid white;
+	border-right: none;*/
+	background: rgba(0,151,100,0.2);
+	position: relative;
+	height: 45px;
+}
+ .ui-grid-a .ui-block-a:hover, .ui-grid-a .ui-block-b:hover{
+	background: rgba(0,151,100,0.5);
+	transition: background-color 3s;
+}
+
+.bor{
+	text-align: center;
+	border: none;
+	color:#EA7500;
+}
+ .ui-grid-a .ui-block-a img, .ui-grid-a .ui-block-b img{
+	width: 30px;
+	position: absolute;
+	left:20% ;
+	top: 7px;
+	
+}
+ .ui-grid-a .ui-block-a a, .ui-grid-a  .ui-block-b a{
+	position: absolute;
+	left:31% ;
+	top: -14%;
+}
+
+#line{
+	position: absolute;
+	left: 100%;
+	top: 20%;
+	font-size: 20px;
+}
+.test{
+	width: 100%;
+	height: 31px;
+	font-family: "arial, helvetica, sans-serif";
+	font-size: 14px;
+	/*background: palegoldenrod;*/
+	margin-top: -10px;
+	position: relative;
+	border-bottom: 1px solid #FFC78E;
+	line-height: 30px;
+	position: relative;
+}
+.test img{
+	width: 25px;
+	position: absolute;
+	right: 1%;
+	top: 10%;
+}
+
+.test h3:hover{
+	color: #E79952;
+	cursor: pointer;
+}
+
+.color1{
+	
+	background: rgba(0,151,100,0.48);
+}
+.color2{
+	background: rgba(0,90,137,0.4);
+}
+
+.color3{
+	background: rgba(255,85,0,0.4);
+}
+.color4{
+	background: rgba(234,74,75,0.4);
+}
+.color5{
+	background: rgba(254,199,47,0.4);
+}
+.color6{
+	background: rgba(40,191,193,0.4);
+}
+
+.ui-grid-b{
+	margin-top: 4%;
+}
+#starinfo{
+	font-size: 15px;
+	width: auto;
+	height: 160px;
+	background: rgba(255,151,151,0.2);
+	overflow: scroll;
+	margin-bottom: 10px;
+	padding: 20px;
+}
+#starinfo::-webkit-scrollbar{
+	width:0px;
+}
+.bott{
+	border-bottom: none;
+}
+.select{
+	width: 100%;
+	position: absolute;
+	left: 78%;
+	top: 4%;
+	border: none;
+}
+.select select{
+	width: auto;
+	background: none;
+	border: none;
+	color: 	#FFAF60;
+}
+.select select option{
+	background:rgba(206,206,255,0.5);
+	/*opacity: 0.5;*/
+	color: #808080;
+	border: none!important;
+	/*text-align: center;*/
+}
+
+.mar{
+	margin-top: 20px;
+}
+#font{
+	color:#FAF4FF;
+}
+.border{
+	position: relative;
+	margin-top: 26px;
+}
+
+.border ul li:hover{
+	background: rgba(0,151,100,0.2);
+	
+}
+</style>
+	</head>
+	<body>
+		<!-- 页面开始 -->
+<div id="localpage" data-role="page" data-theme="f">
+	
+	
+	
+	
+	
+	
+	 <div data-role="panel" id="myPanel" data-swipe-close="true" data-display="push"> 
+	 	<div class="border">
+	     <ul data-role="listview" >
+		      <li ><a href="index.html" data-ajax="false" id="font"><img src="img/main.png"  class="ui-li-icon" >首页</a></li>
+		      <li><a href="newinfo.html" data-ajax="false" id="font"><img src="img/new.png" class="ui-li-icon" data-transition="silde">新闻动态</a></li>
+		      <li><a href="#" data-ajax="false" id="font"><img src="img/cp.png" class="ui-li-icon">产品展示</a></li>
+		      <li><a href="about.html" data-ajax="false" id="font"><img src="img/about.png" class="ui-li-icon">关于我们</a></li>
+		      <li><a href="liuyan.html" data-ajax="false" id="font"><img src="img/liuyan.png"  class="ui-li-icon">留言板</a></li>
+    	</ul>
+    	</div>
+  	</div> 
+	
+<!-- 头部开始 -->
+    <div data-role="header" data-theme="f" >
+        <a href="#page1" class="ui-btn ui-corner-all ui-shadow ui-icon-back ui-btn-icon-left ui-btn-icon-notext bor" data-transition="flip"  onclick="goBack()">主页</a>
+    <h1>好随意</h1>
+    <a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-search ui-btn-icon-left ui-btn-icon-notext bor">搜索</a>
+    </div>
+<!-- 头部结束 -->
+    <div data-role="content">
+    	
+		<div class="mainbg">
+	    	<a href="" class="" data-iconpos="top">
+	    		<!--<img src="img/bg2.jpg" style="width:355px; height:200px;"/>-->
+	    	</a>
+    	</div>
+		<!--导航模块：热门电影and音乐电台-->
+    	<div class="ui-grid-a">
+      		<div class="ui-block-a" onclick="myadio()">
+      			<img src="img/lcmv.png" />
+       			<a href="#" class="ui-btn ui-corner-all bor" id="movie" >热门电影</a><br>
+       			<span id="line">|</span>
+     		</div>
+
+      		<div class="ui-block-b" onclick="mymusic()">
+      			<img src="img/lcmus.png" />
+       			<a href="#" class="ui-btn ui-corner-all bor">音乐电台</a><br>
+      		</div>
+    	</div>
+    	
+    	<!--列表-->
+    	<div class="test">
+    		<h3>电台个性推荐</h3>
+    		<img src="img/refresh.png" />
+    	</div>
+    	
+		<!-- 网格开始 -->
+		<div class="ui-grid-b ">
+				<div class="ui-block-a color1" >
+					<a href="#" class="ui-btn  bird bor" onclick="qqmusic_init(3)">				
+						<h4 >欧美</h4>
+					</a>	
+				</div>
+				<div class="ui-block-b color2">
+					<a href="#" class="ui-btn  bird bor" onclick="qqmusic_init(5)">				
+						<h4 >内地</h4>
+					</a>
+				</div>
+				<div class="ui-block-c color3">
+					<a href="#" class="ui-btn  bird bor" onclick="qqmusic_init(4)">				
+						<h4 >流行榜</h4>
+					</a>
+				</div>
+				
+			</div>
+			<!-- 网格结束 -->
+			<!-- 网格开始 -->
+			<div class="ui-grid-b ">
+				<div class="ui-block-a color4">
+					<a href="#" class="ui-btn  bird bor" onclick="qqmusic_init(6)">				
+						<h4 >港台</h4>
+					</a>	
+				</div>
+				<div class="ui-block-b color5">
+					<a href="#" class="ui-btn  bird bor" onclick="qqmusic_init(16)">				
+						<h4 >韩国</h4>
+					</a>
+				</div>
+				<div class="ui-block-c color6">
+					<a href="#" class="ui-btn  bird bor" onclick="qqmusic_init(17)">				
+						<h4 >日本</h4>
+					</a>
+					
+				</div>
+				
+			</div>
+			<!-- 网格结束 -->
+    
+    	<div id="contentview"></div>
+    	
+    	<div class="test mar" >
+    		<h3 >直播频道</h3>
+    		<img src="img/refresh.png" />
+    		<div></div>
+    	</div>
+    	
+    	<div class="test bott" >
+    		<h3>星座运势</h3>
+    		<div class="select">
+    			<select class="ch"  data-role="none" id="start">
+    			<option value="双子座的运势" selected="selected">双子座</option>
+    			<option value="双鱼座的运势">双鱼座</option>
+    			<option value="白羊座的运势">白羊座</option>
+    			<option value="摩羯座的运势">摩羯座</option>
+    			<option value="金牛座的运势">金牛座</option>
+    			<option value="处女座的运势">处女座</option>
+    			<option value="巨蟹座的运势">巨蟹座</option>
+    			<option value="狮子座的运势">狮子座</option>
+    			<option value="水瓶座的运势">水瓶座</option>
+    			<option value="射手座的运势">射手座</option>
+    			<option value="天秤座的运势">天秤座</option>
+    			<option value="天羯座的运势">天羯座</option>
+    		</select>
+    		</div>
+    		
+    		<div id="starinfo"></div>
+    	</div>
+    	
+    
+       <div class="menu">
+    		<a href="#myPanel" >
+    		<img src="img/menu.png"/>
+    		</a>
+  		</div>
+  		  
+    </div>
+<!-- 底部开始 -->
+   <div data-role="footer" data-theme="f" data-position="fixed" >
+    	<h2>&copy;byhaosuiyi</h2>
+    </div>
+<!-- 底部结束 -->
+</div>
+	</body>
+</html>
+<script>
+	$(document).on("pageinit", "#localpage", local_init);
+	function local_init(){
+		$.post("http://www.tuling123.com/openapi/api",
+		{ 
+			"key" : "9f1905a2ddca4db7905560146ec033cd",
+			 "info":"双子座的运势"
+		},
+		function(data){
+			$("#starinfo").html(data.text);
+			
+		},"json");	
+		$("#start").on("change", function() {
+			selectValue = $(this).val();
+			//alert("获取下拉选择框的值为:" + $(this).val());
+			if ("" == selectValue) {
+				alert("请选择星座:");
+				return;
+			}
+		$.post("http://www.tuling123.com/openapi/api",
+		{ 
+			"key" : "9f1905a2ddca4db7905560146ec033cd",
+			 "info":selectValue
+		},
+		function(data){
+			$("#starinfo").html(data.text);
+			
+		},"json");
+	});
+
+	}
+	function qqmusic_init(id){
+		$.ajax({
+			type:"post",
+			url:"http://route.showapi.com/213-4",
+			data:{
+				"showapi_appid" : "39110",
+				"showapi_sign" : "c315bcfc9ad84f459c19b4759f16452a",
+				"topid" : id
+				
+			},
+			//sriptCharset: 'utf-8',
+			//contentType: "application/x-www-form-urlencoded; charset=gbk", 
+			dataType : "json",
+			beforeSend : function() {
+					//alert("正在请求sQQ音乐服务器资源，请稍后...");
+				},
+			success : function(data) {
+				$(".ui-grid-b").hide();
+//				alert(data);
+				var  datas="<div data-role='collapsible-set' data-theme='a' data-content-theme='' >";
+				$.each(data.showapi_res_body.pagebean.songlist,function(index,row){
+				var imgpath=row.albumpic_small;
+				var target="yi_playmusic.html?urlpath="+row.url;
+				datas+="<div data-role='collapsible' data-collapsed='true'></div>";
+				datas+="<h3>"+row.songname+"</h3>";
+				//alert(row.songname);
+				datas+="<ul data-role='listview' data-inset='true' data-divider-theme='b'>";
+				datas+="<li>";	
+				datas+="<a  href='"+target+"?"+row.albumpic_big+"?"+encodeURI(row.songname) +"' data-ajax='false'><img  src='"+imgpath+"'/><h3>"+row.songname+"</h3><p>"+row.singername+"</p>"
+//				$("a").click(function(){
+//							//alert("点击li");
+//							var playpath=$(this).children()[0].value;
+//							var mname=$(this).children(".poin").html();
+//							console.log(playpath);
+//							console.log(mname);
+//							var myurl="playmusic.html"+"?"+"playpath="+playpath+"&"+"mname="+mname;
+//							window.location.assign(myurl);
+//						});
+//				
+				
+				datas+="</a></li>";
+				datas+="</ul>";
+				datas+="</div>";
+				});
+				 datas+="</div>";
+				$("#contentview").html(datas);
+				$("#contentview").trigger("create");
+				
+			},
+			error:function(){
+				alert("error!");
+			}
+		});
+	}
+	
+	function myadio(){
+		$.ajax({
+			type:"post",
+			url:"http://www.tuling123.com/openapi/api",
+			data:{
+				"key" : "9f1905a2ddca4db7905560146ec033cd",
+				 "info":"最近热门电影"
+			
+			},
+			dataType : "json",
+			beforeSend : function() {
+					//alert("正在请求热门电影资源请稍后...");
+				},
+			success:function(data){
+				//alert(data);
+//				alert(data.url);
+				window.location.assign("http://m.wangpiao.com/WpTouch/touch/index" );
+				
+			},
+			error:function(){
+				alert("error");
+			}
+			
+			
+		});
+	}
+	
+	function mymusic(){
+		window.location.assign("yi_qqmusic.html");
+	}
+		
+	function goBack(){
+		window.history.back();
+	}
+</script>
